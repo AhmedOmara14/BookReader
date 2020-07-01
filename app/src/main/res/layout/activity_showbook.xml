@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.showbook"
+    app:layoutDescription="@xml/activity_showbook_scene">
+
+
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/content_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/content" />
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wg"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:textSize="20dp"
+
+            android:paddingBottom="32dp"
+            android:text="Bali Province, is one of the provinces of Indonesia, and is considered an international tourist destination. There is a volcanic rock formation of one of the important landmarks named Tanah Lot and its capital, Denpasar Bali Province, is one of the provinces of Indonesia, and is considered an international tourist destination. There is a volcanic rock formation of one of the important landmarks named Tanah Lot and its capital, Denpasar"
+            app:lineHeight="26dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_layout_bg"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/header_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wg"
+            android:padding="32dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="Description of Book"
+            android:textColor="@android:color/background_dark"
+            android:textSize="22sp"
+            />
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_favorite_24"
+            tools:layout_editor_absoluteX="14dp"
+            android:background="#FFF"
+            android:layout_gravity="center"
+            android:layout_marginRight="40dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

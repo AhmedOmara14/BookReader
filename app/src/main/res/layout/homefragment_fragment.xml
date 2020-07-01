@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.homefragment">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:fontFamily="@font/wg"
+                android:text="What do you want to read today?">
+
+            </TextView>
+            <TextView
+                android:id="@+id/search_items"
+                android:paddingLeft="10dp"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:textColor="#656262"
+                android:fontFamily="@font/wg"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="-100dp"
+                android:backgroundTint="#46A6A5A5"
+                android:background="#C13C3C"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:text="Search book title, Author"
+                >
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:fontFamily="@font/wg"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Popular Books in Programming">
+
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_programming"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                tools:listitem="@layout/layout_rec_programming">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:fontFamily="@font/wg"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Recommended Books in Sports "
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_sports"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                tools:listitem="@layout/layout_rec_sports">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</layout>
