@@ -21,12 +21,15 @@ import tra.wor.bookreader.pojo.items;
 
 public class namesportsAdapter  extends RecyclerView.Adapter<namesportsAdapter.viewholder> {
     List<items> programmings;
+
     Context context;
 
     public namesportsAdapter(List<items> programmings, Context context) {
         this.programmings = programmings;
         this.context = context;
     }
+
+
 
     @NonNull
     @Override

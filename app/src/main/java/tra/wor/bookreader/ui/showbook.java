@@ -5,7 +5,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
@@ -16,7 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import tra.wor.bookreader.R;
 import tra.wor.bookreader.data.Repositry;
-import tra.wor.bookreader.data.database;
+import tra.wor.bookreader.pojo.info_favorite;
 
 public class showbook extends AppCompatActivity {
     String img, des,title,author;
@@ -27,7 +26,6 @@ public class showbook extends AppCompatActivity {
     @BindView(R.id.imageButton)
     ImageButton imageButton;
     Repositry repositry;
-    database database=new database(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,10 +55,8 @@ public class showbook extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-              if (database.addData(img+"",title+"",author+"",des+"")){
-                  Toast.makeText(showbook.this, "Save in Favorite", Toast.LENGTH_SHORT).show();
-              }
+                info_favorite info_favorite=new info_favorite(img,title,author,des);
+              repositry.insert(info_favorite);
             }
         });
 
