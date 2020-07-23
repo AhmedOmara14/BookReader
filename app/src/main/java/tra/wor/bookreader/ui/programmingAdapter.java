@@ -17,6 +17,7 @@ import java.util.List;
 
 import tra.wor.bookreader.R;
 import tra.wor.bookreader.pojo.items;
+import tra.wor.bookreader.ui.main.showbook;
 
 public class programmingAdapter extends RecyclerView.Adapter<programmingAdapter.viewholder> {
    List<items> programmings;
@@ -42,7 +43,7 @@ public class programmingAdapter extends RecyclerView.Adapter<programmingAdapter.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,showbook.class);
+                Intent intent=new Intent(context, showbook.class);
                 intent.putExtra("image",programmings.get(position).getVolumeInfo().getImageLinks().getThumbnail());
                 intent.putExtra("title",programmings.get(position).getVolumeInfo().getTitle());
                 intent.putExtra("author",programmings.get(position).getVolumeInfo().getAuthors());

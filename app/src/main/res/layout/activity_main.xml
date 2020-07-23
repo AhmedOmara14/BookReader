@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="tra.wor.bookreader.ui.MainActivity">
+        tools:context="tra.wor.bookreader.ui.main.MainActivity">
 
 
         <FrameLayout

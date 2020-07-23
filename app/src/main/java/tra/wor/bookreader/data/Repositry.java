@@ -16,6 +16,7 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import retrofit2.Retrofit;
 import tra.wor.bookreader.pojo.fav_Dao;
 import tra.wor.bookreader.pojo.favo_database;
 import tra.wor.bookreader.pojo.info_favorite;
@@ -37,8 +38,10 @@ public class Repositry extends AndroidViewModel {
         listMutableLiveData_fav = fav_dao.allofrecord();
     }
 
-    public MutableLiveData<List<items>> getitems(String item) {
-        Observable<programming> observable = apiclient.getInstance().getbooks(item)
+    public MutableLiveData<List<items>> getitems(String item, Retrofit retrofit) {
+        apiInterface apiInterface=retrofit.create(apiInterface.class);
+
+        Observable<programming> observable = apiInterface.getbook(item)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
         Observer<programming> programmingObserver = new Observer<programming>() {

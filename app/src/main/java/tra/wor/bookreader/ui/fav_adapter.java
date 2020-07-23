@@ -18,6 +18,7 @@ import java.util.List;
 
 import tra.wor.bookreader.R;
 import tra.wor.bookreader.pojo.info_favorite;
+import tra.wor.bookreader.ui.main.showbook;
 
 public class fav_adapter  extends RecyclerView.Adapter<fav_adapter.viewholder> {
     List<info_favorite> favoriteList=new ArrayList<>();
@@ -47,7 +48,7 @@ public class fav_adapter  extends RecyclerView.Adapter<fav_adapter.viewholder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,showbook.class);
+                Intent intent=new Intent(context, showbook.class);
                 intent.putExtra("image",favoriteList.get(position).getImage());
                 intent.putExtra("title",favoriteList.get(position).getTitle());
                 intent.putExtra("author",favoriteList.get(position).getAuthor());

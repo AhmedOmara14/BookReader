@@ -17,6 +17,7 @@ import java.util.List;
 
 import tra.wor.bookreader.R;
 import tra.wor.bookreader.pojo.sports;
+import tra.wor.bookreader.ui.main.showsports;
 
 public class sportsAdapter extends RecyclerView.Adapter<sportsAdapter.viewholder> {
 
@@ -42,7 +43,7 @@ public class sportsAdapter extends RecyclerView.Adapter<sportsAdapter.viewholder
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,showsports.class);
+                Intent intent=new Intent(context, showsports.class);
                 intent.putExtra("sport",sports.get(position).getName());
                 context.startActivity(intent);
             }
